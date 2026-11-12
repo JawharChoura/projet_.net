@@ -1,0 +1,164 @@
+@page "/admin/categories"
+@using Front.Models
+@using Front.Services
+@inject CategoryAdminService CategoryAdminService
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Gestion des Catégories</h1>
+        <button class="btn btn-primary" @onclick="NavigateToAddCategory">
+            <i class="bi bi-plus-circle"></i> Nouvelle Catégorie
+        </button>
+    </div>
+
+    @if (!isAdmin)
+    {
+        <div class="alert alert-danger">
+            <h4>Accès refusé</h4>
+            <p>Cette page est réservée aux administrateurs.</p>
+            <button class="btn btn-secondary" @onclick="GoToMenu">Retour au menu</button>
+        </div>
+    }
+    else if (loading)
+    {
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (categories == null || !categories.Any())
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center">Aucune catégorie disponible</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                @foreach (var category in categories)
+                                {
+                                    <tr>
+                                        <td>@category.Id</td>
+                                        <td>@category.Name</td>
+                                        <td>@category.Description</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary me-1"
+                                                    @onclick="@(() => EditCategory(category.Id))">
+                                                <i class="bi bi-pencil"></i> Modifier
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger"
+                                                    @onclick="@(() => ConfirmDelete(category.Id))">
+                                                <i class="bi bi-trash"></i> Supprimer
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Category>? categories;
+    private bool loading = true;
+    private bool isAdmin = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var roles = await Auth.GetRolesAsync();
+        isAdmin = roles?.Contains("Admin") == true;
+
+        if (isAdmin)
+        {
+            await LoadCategories();
+        }
+        else
+        {
+            loading = false;
+        }
+    }
+
+    private async Task LoadCategories()
+    {
+        try
+        {
+            categories = await CategoryAdminService.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erreur lors du chargement des catégories: {ex.Message}");
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private void NavigateToAddCategory()
+    {
+        Nav.NavigateTo("/admin/categoryform");
+    }
+
+    private void EditCategory(int categoryId)
+    {
+        Nav.NavigateTo($"/admin/categoryform/{categoryId}");
+    }
+
+    // Confirmation avant suppression
+    private async Task ConfirmDelete(int categoryId)
+    {
+        if (await JSRuntime.InvokeAsync<bool>("confirm", "Voulez-vous vraiment supprimer cette catégorie ?"))
+        {
+            await DeleteCategory(categoryId);
+        }
+    }
+
+    private async Task DeleteCategory(int categoryId)
+    {
+        try
+        {
+            var success = await CategoryAdminService.DeleteAsync(categoryId);
+            if (success)
+            {
+                await LoadCategories(); // Recharger la liste après suppression
+            }
+            else
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "Erreur lors de la suppression");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erreur lors de la suppression: {ex.Message}");
+        }
+    }
+
+    private void GoToMenu()
+    {
+        Nav.NavigateTo("/menu");
+    }
+
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; } = default!;
+}

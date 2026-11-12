@@ -1,0 +1,60 @@
+﻿/* Background dégradé type dashboard */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Carte de login centrée */
+.login-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Focus des inputs */
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Bouton gradient et hover animé */
+.btn-gradient {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: white;
+}
+
+    .btn-gradient:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+/* Lien d'inscription stylé */
+.text-link {
+    color: #667eea;
+    font-weight: 600;
+}
+
+    .text-link:hover {
+        text-decoration: underline;
+    }

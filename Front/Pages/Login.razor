@@ -1,0 +1,45 @@
+﻿@page "/login"
+@using Front.Models
+@using Front.Services
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<div style="max-width: 400px; margin: 100px auto; padding: 20px; border: 1px solid #ddd;">
+    <h3 style="text-align: center;">Connexion</h3>
+
+    <div style="margin-bottom: 15px;">
+        <label>Email</label>
+        <input @bind="email" placeholder="admin@monresto.com" style="width: 100%; padding: 8px;" />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label>Mot de passe</label>
+        <input type="password" @bind="password" placeholder="Admin123!" style="width: 100%; padding: 8px;" />
+    </div>
+
+    <button @onclick="DoLogin" style="width: 100%; padding: 10px; background: #007bff; color: white; border: none;">
+        Se connecter
+    </button>
+
+    <div style="text-align: center; margin-top: 15px;">
+        <a href="/register">Pas de compte ? S'inscrire</a>
+    </div>
+</div>
+
+@code {
+    private string email = "admin@monresto.com";
+    private string password = "Admin123!";
+
+    private async Task DoLogin()
+    {
+        // Créer la requête de login
+        var request = new LoginRequest { Email = email, Password = password };
+
+        // Appeler le service d'authentification
+        var success = await Auth.LoginAsync(request);
+
+        // Si réussi, rediriger vers le menu
+        if (success)
+            Nav.NavigateTo("/menu");
+    }
+}

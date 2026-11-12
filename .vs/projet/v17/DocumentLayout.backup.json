@@ -1,0 +1,513 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\2\u0027em ing\\.net\\projet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\ArticleRepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Respositories\\Implementations\\ArticleRepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\OrderRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Respositories\\Implementations\\OrderRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\IOrderRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Respositories\\Interfaces\\IOrderRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\front.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\front.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\API\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\API\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Layout\\MainLayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Layout\\MainLayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Admin\\Articles.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Pages\\Admin\\Articles.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Checkout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Pages\\Checkout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Cart.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Pages\\Cart.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Pages\\Index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Pages\\Login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Pages\\Register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Components\\CartIcon.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Components\\CartIcon.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Components\\ArticleCard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Components\\ArticleCard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Services\\OrderService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Services\\OrderService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Services\\ArticleService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Services\\ArticleService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Services\\CartService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Services\\CartService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Services\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Services\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Models\\Auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Models\\Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Models\\Cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Article.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:front\\Models\\Article.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArticleRepository .cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\ArticleRepository .cs",
+              "RelativeDocumentMoniker": "API\\Respositories\\Implementations\\ArticleRepository .cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\ArticleRepository .cs",
+              "RelativeToolTip": "API\\Respositories\\Implementations\\ArticleRepository .cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T21:04:00.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "API\\Respositories\\Implementations\\OrderRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\OrderRepository.cs",
+              "RelativeToolTip": "API\\Respositories\\Implementations\\OrderRepository.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAqwFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T21:03:32.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "API\\Respositories\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "API\\Respositories\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T21:02:53.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T20:57:54.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAD8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:56:41.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "front\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "front\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAowJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-11T20:48:46.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "front\\wwwroot\\index.html",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\index.html",
+              "RelativeToolTip": "front\\wwwroot\\index.html",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowD8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-11T20:48:13.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "front\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "front\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:47:13.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Program.cs",
+              "RelativeDocumentMoniker": "front\\Program.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Program.cs",
+              "RelativeToolTip": "front\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:41:50.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "front\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "front\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:47:41.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Articles.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Admin\\Articles.razor",
+              "RelativeDocumentMoniker": "front\\Pages\\Admin\\Articles.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Admin\\Articles.razor",
+              "RelativeToolTip": "front\\Pages\\Admin\\Articles.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:46:32.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "front\\Services\\ApiService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\ApiService.cs",
+              "RelativeToolTip": "front\\Services\\ApiService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:39:02.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "front.csproj",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\front.csproj",
+              "RelativeDocumentMoniker": "front\\front.csproj",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\front.csproj",
+              "RelativeToolTip": "front\\front.csproj",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowBsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-11T20:30:12.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "front\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Properties\\launchSettings.json",
+              "RelativeToolTip": "front\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T20:30:51.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Checkout.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Checkout.razor",
+              "RelativeDocumentMoniker": "front\\Pages\\Checkout.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Checkout.razor",
+              "RelativeToolTip": "front\\Pages\\Checkout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:45:20.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Cart.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Cart.razor",
+              "RelativeDocumentMoniker": "front\\Pages\\Cart.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Cart.razor",
+              "RelativeToolTip": "front\\Pages\\Cart.razor",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAowLEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:44:57.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "front\\Pages\\Index.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Index.razor",
+              "RelativeToolTip": "front\\Pages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:43:25.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "front\\Pages\\Login.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Login.razor",
+              "RelativeToolTip": "front\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:43:59.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "front\\Pages\\Register.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Pages\\Register.razor",
+              "RelativeToolTip": "front\\Pages\\Register.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:44:21.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ArticleCard.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Components\\ArticleCard.razor",
+              "RelativeDocumentMoniker": "front\\Components\\ArticleCard.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Components\\ArticleCard.razor",
+              "RelativeToolTip": "front\\Components\\ArticleCard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:42:43.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CartIcon.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Components\\CartIcon.razor",
+              "RelativeDocumentMoniker": "front\\Components\\CartIcon.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Components\\CartIcon.razor",
+              "RelativeToolTip": "front\\Components\\CartIcon.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T20:42:25.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "front\\Services\\OrderService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\OrderService.cs",
+              "RelativeToolTip": "front\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:41:06.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "front\\Services\\CartService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\CartService.cs",
+              "RelativeToolTip": "front\\Services\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:40:38.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ArticleService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\ArticleService.cs",
+              "RelativeDocumentMoniker": "front\\Services\\ArticleService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\ArticleService.cs",
+              "RelativeToolTip": "front\\Services\\ArticleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:40:09.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "front\\Services\\AuthService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Services\\AuthService.cs",
+              "RelativeToolTip": "front\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:39:40.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Auth.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Auth.cs",
+              "RelativeDocumentMoniker": "front\\Models\\Auth.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Auth.cs",
+              "RelativeToolTip": "front\\Models\\Auth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:36:14.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "front\\Models\\Order.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Order.cs",
+              "RelativeToolTip": "front\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:35:55.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "front\\Models\\Cart.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Cart.cs",
+              "RelativeToolTip": "front\\Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:35:34.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Article.cs",
+              "RelativeDocumentMoniker": "front\\Models\\Article.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\front\\Models\\Article.cs",
+              "RelativeToolTip": "front\\Models\\Article.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:34:57.884Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

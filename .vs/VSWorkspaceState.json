@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\API",
+    "\\API\\Properties",
+    "\\API\\Respositories",
+    "\\API\\Respositories\\Implementations",
+    "\\API\\Respositories\\Interfaces",
+    "\\front\\Layout",
+    "\\front\\obj",
+    "\\front\\wwwroot",
+    "\\front\\wwwroot\\css"
+  ],
+  "SelectedNode": "\\API\\Respositories\\Implementations\\ArticleRepository .cs",
+  "PreviewInSolutionExplorer": false
+}

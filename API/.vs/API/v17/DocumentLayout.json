@@ -1,0 +1,977 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\2\u0027em ing\\.net\\projet\\API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\implementations\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\implementations\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\admin\\articles.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\admin\\categories.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\admin\\articleform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\panier.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\services\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\interfaces\\icartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\interfaces\\icartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\implementations\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\implementations\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\menu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\services\\categoryadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\services\\articleadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\pages\\testconnection.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\css\\menu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8D2AEBF-6B32-41CB-9D3C-CA37E8E40C73}|..\\Front\\Front.csproj|c:\\2\u0027em ing\\.net\\projet\\front\\front.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\interfaces\\iarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\interfaces\\iarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\implementations\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\implementations\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\respositories\\implementations\\articlerepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:respositories\\implementations\\articlerepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|c:\\2\u0027em ing\\.net\\projet\\api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED562DFE-B9EF-5F88-771F-EBF333E4D08F}|API.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Articles.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Admin\\Articles.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Admin\\Articles.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Admin\\Articles.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Admin\\Articles.razor",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAjwGMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T09:52:56.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ArticlesController.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\ArticlesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ArticlesController.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\ArticlesController.cs",
+              "RelativeToolTip": "Controllers\\ArticlesController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAuwJcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:12.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\Category.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Category.cs",
+              "RelativeToolTip": "..\\Front\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:56:15.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Article.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\Article.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Article.cs",
+              "RelativeToolTip": "..\\Front\\Models\\Article.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:56:02.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:59:53.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "Respositories\\Implementations\\CategoryRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\CategoryRepository.cs",
+              "RelativeToolTip": "Respositories\\Implementations\\CategoryRepository.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAADoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:04:43.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "Respositories\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "Respositories\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:03:57.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:11.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Categories.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Admin\\Categories.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Admin\\Categories.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Admin\\Categories.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Admin\\Categories.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T12:14:35.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ArticleForm.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Admin\\ArticleForm.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Admin\\ArticleForm.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Admin\\ArticleForm.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Admin\\ArticleForm.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T09:53:09.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:22.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Menu.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Menu.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Menu.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Menu.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Menu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T09:52:11.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:58:15.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ArticleService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\ArticleService.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Services\\ArticleService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\ArticleService.cs",
+              "RelativeToolTip": "..\\Front\\Services\\ArticleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:54:17.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:28.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ICartRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\ICartRepository.cs",
+              "RelativeDocumentMoniker": "Respositories\\Interfaces\\ICartRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\ICartRepository.cs",
+              "RelativeToolTip": "Respositories\\Interfaces\\ICartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:04:08.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\CartRepository.cs",
+              "RelativeDocumentMoniker": "Respositories\\Implementations\\CartRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\CartRepository.cs",
+              "RelativeToolTip": "Respositories\\Implementations\\CartRepository.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:03:11.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Panier.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Panier.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Panier.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Panier.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Panier.razor",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAALUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T09:52:26.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Services\\CartService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\CartService.cs",
+              "RelativeToolTip": "..\\Front\\Services\\CartService.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAQwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:54:44.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Login.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Login.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Login.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T09:51:39.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Counter.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Counter.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T11:06:00.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAqwCYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:07.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Services\\OrderService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\OrderService.cs",
+              "RelativeToolTip": "..\\Front\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:54:56.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Register.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Register.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Register.razor",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAuwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T15:21:37.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ArticleAdminService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\ArticleAdminService.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Services\\ArticleAdminService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\ArticleAdminService.cs",
+              "RelativeToolTip": "..\\Front\\Services\\ArticleAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:55:09.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Services\\AuthService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\AuthService.cs",
+              "RelativeToolTip": "..\\Front\\Services\\AuthService.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAqwKkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:54:04.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CategoryAdminService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\CategoryAdminService.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Services\\CategoryAdminService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\CategoryAdminService.cs",
+              "RelativeToolTip": "..\\Front\\Services\\CategoryAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:55:21.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Services\\CategoryService.cs",
+              "RelativeToolTip": "..\\Front\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:54:30.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PROFILE.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\PROFILE.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\PROFILE.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\PROFILE.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\PROFILE.razor",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAuwLYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T15:25:40.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Home.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Home.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T10:55:02.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\RegisterRequest.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\RegisterRequest.cs",
+              "RelativeToolTip": "..\\Front\\Models\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:57:35.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\OrderItem.cs",
+              "RelativeToolTip": "..\\Front\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:57:10.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\Order.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Order.cs",
+              "RelativeToolTip": "..\\Front\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:56:57.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\LoginResponse.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\LoginResponse.cs",
+              "RelativeToolTip": "..\\Front\\Models\\LoginResponse.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwCEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:57:47.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\LoginRequest.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\LoginRequest.cs",
+              "RelativeToolTip": "..\\Front\\Models\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:57:22.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\CartItem.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\CartItem.cs",
+              "RelativeToolTip": "..\\Front\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:56:39.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Models\\Cart.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Models\\Cart.cs",
+              "RelativeToolTip": "..\\Front\\Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:56:27.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "..\\Front\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAALAAAAAAAAAAAAAowLsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T13:47:43.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "..\\Front\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAowEoBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T13:47:47.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "RegisterUserDTO.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\DTOs\\RegisterUserDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\RegisterUserDTO.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\DTOs\\RegisterUserDTO.cs",
+              "RelativeToolTip": "DTOs\\RegisterUserDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:23.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\Weather.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\Weather.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\Weather.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T11:06:36.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "TestConnection.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\TestConnection.razor",
+              "RelativeDocumentMoniker": "..\\Front\\Pages\\TestConnection.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Pages\\TestConnection.razor",
+              "RelativeToolTip": "..\\Front\\Pages\\TestConnection.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T14:20:13.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Front\\Program.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Program.cs",
+              "RelativeToolTip": "..\\Front\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T09:58:25.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-12T14:34:03.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T19:02:25.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "..\\Front\\wwwroot\\index.html",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\wwwroot\\index.html",
+              "RelativeToolTip": "..\\Front\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-12T13:00:45.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "menu.css",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\wwwroot\\css\\menu.css",
+              "RelativeDocumentMoniker": "..\\Front\\wwwroot\\css\\menu.css",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\wwwroot\\css\\menu.css",
+              "RelativeToolTip": "..\\Front\\wwwroot\\css\\menu.css",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-12T13:03:54.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "..\\Front\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "..\\Front\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-12T13:00:21.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\App.razor",
+              "RelativeDocumentMoniker": "..\\Front\\App.razor",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\App.razor",
+              "RelativeToolTip": "..\\Front\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T10:09:39.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Front.csproj",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\Front\\Front.csproj",
+              "RelativeDocumentMoniker": "..\\Front\\Front.csproj",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\Front\\Front.csproj",
+              "RelativeToolTip": "..\\Front\\Front.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-12T09:53:23.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:17.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "Models\\Cart.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Cart.cs",
+              "RelativeToolTip": "Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:31.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Respositories\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "Respositories\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:04:22.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IArticleRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\IArticleRepository.cs",
+              "RelativeDocumentMoniker": "Respositories\\Interfaces\\IArticleRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Interfaces\\IArticleRepository.cs",
+              "RelativeToolTip": "Respositories\\Interfaces\\IArticleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:04:00.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ArticleRepository .cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\ArticleRepository .cs",
+              "RelativeDocumentMoniker": "Respositories\\Implementations\\ArticleRepository .cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\ArticleRepository .cs",
+              "RelativeToolTip": "Respositories\\Implementations\\ArticleRepository .cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAuwFYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:03:04.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Models\\OrderItem.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\OrderItem.cs",
+              "RelativeToolTip": "Models\\OrderItem.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:37.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwCEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:35.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:33.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Models\\CartItem.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\CartItem.cs",
+              "RelativeToolTip": "Models\\CartItem.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:32.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Respositories\\Implementations\\OrderRepository.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Respositories\\Implementations\\OrderRepository.cs",
+              "RelativeToolTip": "Respositories\\Implementations\\OrderRepository.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAqwFMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:04:13.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Article.cs",
+              "RelativeDocumentMoniker": "Models\\Article.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Models\\Article.cs",
+              "RelativeToolTip": "Models\\Article.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:30.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\2\u0027em ing\\.net\\projet\\API\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:00:05.984Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

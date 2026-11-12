@@ -1,0 +1,99 @@
+﻿@page "/register"  // Déclare l'URL de cette page : accessible via "/register"
+@using Front.Models // Permet d'utiliser les classes RegisterRequest, LoginRequest, etc.
+@using Front.Services // Permet d'utiliser le service AuthService
+@inject AuthService Auth // Injection du service d'authentification pour appeler l'API
+@inject NavigationManager Nav // Injection du service de navigation pour rediriger l'utilisateur
+
+<!-- Conteneur principal centré verticalement et horizontalement -->
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <!-- Carte contenant le formulaire, avec style moderne -->
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px; border-radius: 15px;">
+        <!-- Titre du formulaire -->
+        <h3 class="text-center mb-4">Inscription</h3>
+
+        <!-- Formulaire Blazor avec validation automatique -->
+        <EditForm Model="registerModel" OnValidSubmit="DoRegister">
+            <DataAnnotationsValidator /> <!-- Active la validation des attributs [Required], etc. -->
+            <ValidationSummary />       <!-- Affiche tous les messages d'erreur de validation -->
+            <!-- Champ Prénom -->
+            <div class="mb-3">
+                <InputText @bind-Value="registerModel.FirstName" placeholder="Prénom" class="form-control" />
+            </div>
+
+            <!-- Champ Nom -->
+            <div class="mb-3">
+                <InputText @bind-Value="registerModel.LastName" placeholder="Nom" class="form-control" />
+            </div>
+
+            <!-- Champ Email -->
+            <div class="mb-3">
+                <InputText @bind-Value="registerModel.Email" placeholder="Email" class="form-control" />
+            </div>
+
+            <!-- Champ Mot de passe -->
+            <div class="mb-3">
+                <InputText @bind-Value="registerModel.Password" type="password" placeholder="Mot de passe" class="form-control" />
+            </div>
+
+            <!-- Champ Téléphone -->
+            <div class="mb-3">
+                <InputText @bind-Value="registerModel.PhoneNumber" placeholder="Téléphone" class="form-control" />
+            </div>
+
+            <!-- Champ Adresse -->
+            <div class="mb-3">
+                <InputText @bind-Value="registerModel.Address" placeholder="Adresse" class="form-control" />
+            </div>
+
+            <!-- Bouton d'inscription -->
+            <button type="submit" class="btn btn-success w-100">S'inscrire</button>
+        </EditForm>
+
+        <!-- Affichage des erreurs serveur ou API -->
+        @if (!string.IsNullOrEmpty(error))
+        {
+            <div class="alert alert-danger mt-3">@error</div>
+        }
+
+        <!-- Lien vers la page de login -->
+        <div class="text-center mt-3">
+            <a href="/login">Déjà un compte ? Se connecter</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Modèle qui contient les informations saisies dans le formulaire
+    private RegisterRequest registerModel = new RegisterRequest();
+
+    // Variable pour stocker les messages d'erreur serveur
+    private string? error;
+
+    // Méthode appelée automatiquement lorsque l'utilisateur valide le formulaire
+    private async Task DoRegister()
+    {
+        error = null; // Réinitialise l'erreur
+
+        try
+        {
+            // Appelle la méthode RegisterAsync du service AuthService
+            var success = await Auth.RegisterAsync(registerModel);
+
+            if (success)
+            {
+                // Si l'inscription réussit, redirige vers la page login
+                Nav.NavigateTo("/login");
+            }
+            else
+            {
+                // Si l'API retourne une erreur, afficher un message générique
+                error = "Échec de l'inscription — vérifiez vos informations.";
+            }
+        }
+        catch (Exception ex)
+        {
+            // En cas d'erreur inattendue (serveur, réseau), afficher le message
+            error = "Erreur serveur : " + ex.Message;
+        }
+    }
+}

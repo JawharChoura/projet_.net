@@ -1,0 +1,202 @@
+﻿@page "/menu"
+@using Front.Models
+@using Front.Services
+@inject ArticleService ArticleService
+@inject CartService CartService
+@inject AuthService Auth
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+
+<div class="container-fluid py-4">
+    <!-- En-tête -->
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-3">
+            <i class="bi bi-menu-button-wide-fill me-3"></i>
+            Notre Menu
+        </h1>
+        <p class="lead text-muted">Découvrez nos délicieux plats préparés avec soin</p>
+    </div>
+
+    @if (articles == null)
+    {
+        <!-- État de chargement -->
+        <div class="text-center py-5">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+            <p class="mt-3 text-muted">Chargement du menu...</p>
+        </div>
+    }
+    else if (articles.Count == 0)
+    {
+        <!-- État vide -->
+        <div class="text-center py-5">
+            <i class="bi bi-inbox fs-1 text-muted mb-3"></i>
+            <h4 class="text-muted">Menu indisponible</h4>
+            <p class="text-muted">Aucun article n'est disponible pour le moment.</p>
+        </div>
+    }
+    else
+    {
+        <!-- Grille des articles -->
+        <div class="row g-4">
+            @foreach (var article in articles)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <!-- Image placeholder -->
+                        @if (!string.IsNullOrEmpty(article.ImageUrl))
+                        {
+                            <img src="@GetImageSrc(article.ImageUrl)" class="card-img-top" alt="@article.Name"
+                                 style="height: 200px; object-fit: cover;" @onerror="HandleImageError">
+                        }
+                        else
+                        {
+                            <div class="card-img-top bg-gradient d-flex align-items-center justify-content-center"
+                                 style="height: 200px;">
+                                <i class="bi bi-image text-white fs-1"></i>
+                            </div>
+                        }
+
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-dark">@article.Name</h5>
+                            <p class="card-text text-muted flex-grow-1">@(string.IsNullOrEmpty(article.Description) ? "Délicieux plat préparé avec soin" : article.Description)</p>
+
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge price-badge fs-6 px-3 py-2">
+                                    @article.Price.ToString("0.00") TND
+                                </span>
+                                <button class="btn btn-add-cart btn-lg px-4"
+                                        @onclick="() => AddToCart(article)">
+                                    <i class="bi bi-cart-plus me-2"></i>
+                                    Ajouter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    }
+
+    .bg-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card-img-top {
+        border-radius: 0.375rem 0.375rem 0 0;
+    }
+
+    .btn-add-cart {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-add-cart:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+    }
+
+    .price-badge {
+        background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%);
+        color: white;
+        font-weight: bold;
+    }
+</style>
+
+@code {
+    private List<Article> articles = new();
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadArticles();
+    }
+
+    private async Task LoadArticles()
+    {
+        try
+        {
+            articles = await ArticleService.GetAllAsync() ?? new List<Article>();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erreur de chargement: {ex.Message}";
+            Console.WriteLine(errorMessage);
+        }
+    }
+
+    private string GetImageSrc(string? imageUrl)
+    {
+        if (string.IsNullOrEmpty(imageUrl))
+            return "/images/placeholder.jpg"; // Placeholder image
+
+        if (imageUrl.StartsWith("http") || imageUrl.StartsWith("/"))
+            return imageUrl;
+
+        return $"/images/{imageUrl}";
+    }
+
+    private void HandleImageError()
+    {
+        // Could set a placeholder or log error
+    }
+
+    private async Task AddToCart(Article article)
+    {
+        try
+        {
+            // Vérifier l'authentification
+            var token = await Auth.GetTokenAsync();
+            if (string.IsNullOrEmpty(token))
+            {
+                Nav.NavigateTo("/login");
+                return;
+            }
+
+            // Récupérer l'ID utilisateur
+            var userId = await Auth.GetUserIdAsync();
+            if (string.IsNullOrEmpty(userId))
+            {
+                Nav.NavigateTo("/login");
+                return;
+            }
+
+            // Créer l'item du panier
+            var cartItem = new CartItem
+            {
+                ArticleId = article.Id,
+                Quantity = 1,
+                UnitPrice = article.Price
+            };
+
+            // Ajouter au panier
+            var success = await CartService.AddItemAsync(userId, cartItem);
+
+            if (success)
+            {
+                await JS.InvokeVoidAsync("alert", $"✅ {article.Name} ajouté au panier !");
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("alert", "❌ Erreur lors de l'ajout au panier");
+            }
+        }
+        catch (Exception ex)
+        {
+            await JS.InvokeVoidAsync("alert", $"❌ Erreur: {ex.Message}");
+        }
+    }
+}

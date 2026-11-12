@@ -1,0 +1,183 @@
+﻿@page "/profile"
+@using Front.Models
+@using Front.Services
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Mon Profil</h3>
+                </div>
+
+                <div class="card-body">
+                    <!-- Affichage des informations utilisateur -->
+                    @if (userInfo == null)
+                    {
+                        <p>Chargement des informations...</p>
+                    }
+                    else
+                    {
+                        <!-- Section informations personnelles -->
+                        <div class="row mb-4">
+                            <div class="col-md-3 text-center">
+                                <!-- Avatar avec initiales -->
+                                <div class="avatar-circle bg-primary text-white d-inline-flex align-items-center justify-content-center rounded-circle"
+                                     style="width: 100px; height: 100px; font-size: 2rem;">
+                                    @userInfo.Initials
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h4>@userInfo.FirstName @userInfo.LastName</h4>
+                                <p class="text-muted">@userInfo.Email</p>
+
+                                <!-- Badge selon le rôle -->
+                                @if (userInfo.IsAdmin)
+                                {
+                                    <span class="badge bg-danger">Administrateur</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">Client</span>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Section détails et actions -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Informations personnelles</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Liste des informations -->
+                                        <dl class="row">
+                                            <dt class="col-sm-4">Email</dt>
+                                            <dd class="col-sm-8">@userInfo.Email</dd>
+
+                                            <dt class="col-sm-4">Prénom</dt>
+                                            <dd class="col-sm-8">@userInfo.FirstName</dd>
+
+                                            <dt class="col-sm-4">Nom</dt>
+                                            <dd class="col-sm-8">@userInfo.LastName</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Actions</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Boutons d'action -->
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-outline-primary"
+                                                    @onclick="EditProfile">
+                                                <i class="bi bi-pencil"></i> Modifier mon profil
+                                            </button>
+
+                                            <button class="btn btn-outline-secondary"
+                                                    @onclick="ViewOrders">
+                                                <i class="bi bi-receipt"></i> Mes commandes
+                                            </button>
+
+                                            <button class="btn btn-outline-danger"
+                                                    @onclick="Logout">
+                                                <i class="bi bi-box-arrow-right"></i> Déconnexion
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Informations de l'utilisateur
+    private UserProfileInfo? userInfo;
+
+    // Méthode appelée lors de l'initialisation
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUserInfo();
+    }
+
+    // Charge les informations utilisateur depuis le stockage local
+    private async Task LoadUserInfo()
+    {
+        // Récupération des données depuis AuthService
+        var userId = await Auth.GetUserIdAsync();
+        var email = await Auth.GetItemAsync<string>("userEmail");
+        var firstName = await Auth.GetItemAsync<string>("userFirstName");
+        var lastName = await Auth.GetItemAsync<string>("userLastName");
+        var roles = await Auth.GetRolesAsync();
+        var isAdmin = roles?.Contains("Admin") == true;
+
+        // Construction de l'objet userInfo
+        userInfo = new UserProfileInfo
+        {
+            Email = email ?? "Non disponible",
+            FirstName = firstName ?? "Non renseigné",
+            LastName = lastName ?? "Non renseigné",
+            IsAdmin = isAdmin,
+            Initials = GenerateInitials(firstName, lastName)
+        };
+    }
+
+    // Génère les initiales à partir du prénom et nom
+    private string GenerateInitials(string? firstName, string? lastName)
+    {
+        if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
+        {
+            return $"{firstName[0]}{lastName[0]}".ToUpper();
+        }
+        else if (!string.IsNullOrEmpty(firstName))
+        {
+            return firstName[0].ToString().ToUpper();
+        }
+        else
+        {
+            return "U"; // "U" pour Utilisateur
+        }
+    }
+
+    // Redirection vers la page de modification de profil
+    private void EditProfile()
+    {
+        // TODO: Implémenter la page d'édition de profil
+        Console.WriteLine("Redirection vers édition de profil");
+    }
+
+    // Redirection vers la liste des commandes
+    private void ViewOrders()
+    {
+        Nav.NavigateTo("/orders");
+    }
+
+    // Déconnexion
+    private async Task Logout()
+    {
+        await Auth.LogoutAsync();
+        Nav.NavigateTo("/");
+    }
+
+    // Classe interne pour stocker les informations de profil
+    private class UserProfileInfo
+    {
+        public string Email { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public bool IsAdmin { get; set; }
+        public string Initials { get; set; } = string.Empty;
+    }
+}

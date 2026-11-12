@@ -1,0 +1,209 @@
+@page "/orders"
+@using Front.Models
+@using Front.Services
+@inject OrderService OrderService
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<div class="container-fluid py-4">
+    <!-- En-tête -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="h3 mb-0 text-gray-800">
+                <i class="bi bi-receipt me-2 text-primary"></i>
+                Mes Commandes
+            </h1>
+            <p class="text-muted mt-1">Historique de vos achats</p>
+        </div>
+        <button class="btn btn-secondary" @onclick="GoToProfile">
+            <i class="bi bi-arrow-left me-2"></i>
+            Retour au profil
+        </button>
+    </div>
+
+    @if (!isLoaded)
+    {
+        <!-- État de chargement -->
+        <div class="text-center py-5">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+            <p class="mt-3 text-muted">Chargement de vos commandes...</p>
+        </div>
+    }
+    else if (orders == null || !orders.Any())
+    {
+        <!-- État vide -->
+        <div class="text-center py-5">
+            <i class="bi bi-receipt-x fs-1 text-muted mb-3"></i>
+            <h4 class="text-muted mb-3">Aucune commande trouvée</h4>
+            <p class="text-muted mb-4">Vous n'avez pas encore passé de commande.</p>
+            <button class="btn btn-primary btn-lg" @onclick="GoToMenu">
+                <i class="bi bi-shop me-2"></i>
+                Commander maintenant
+            </button>
+        </div>
+    }
+    else
+    {
+        <!-- Liste des commandes -->
+        <div class="row g-4">
+            @foreach (var order in orders)
+            {
+                <div class="col-xl-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-light border-0 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Commande #@order.OrderNumber</h6>
+                                <small class="text-muted">@order.OrderDate.ToString("dd/MM/yyyy HH:mm")</small>
+                            </div>
+                            <span class="badge @(GetStatusBadgeClass(order.Status)) fs-6 px-3 py-2">
+                                @GetStatusText(order.Status)
+                            </span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <!-- Informations principales -->
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <div class="text-muted small">Total</div>
+                                    <div class="h5 text-success fw-bold mb-0">@order.TotalAmount.ToString("0.00") TND</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-muted small">Paiement</div>
+                                    <div class="fw-semibold">@GetPaymentStatusText(order.PaymentStatus)</div>
+                                </div>
+                            </div>
+
+                            <!-- Articles de la commande -->
+                            <div class="flex-grow-1">
+                                <h6 class="text-muted mb-2">
+                                    <i class="bi bi-list-ul me-1"></i>
+                                    Articles (@order.OrderItems.Count)
+                                </h6>
+                                <div class="order-items">
+                                    @foreach (var item in order.OrderItems.Take(3))
+                                    {
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <div class="flex-grow-1">
+                                                <small class="fw-semibold">@item.Article.Name</small>
+                                                <div class="text-muted small">@item.Quantity x @(item.UnitPrice.ToString("0.00")) TND</div>
+                                            </div>
+                                            <small class="text-success fw-bold">
+                                                @((item.Quantity * item.UnitPrice).ToString("0.00")) TND
+                                            </small>
+                                        </div>
+                                    }
+                                    @if (order.OrderItems.Count > 3)
+                                    {
+                                        <div class="text-muted small text-center">
+                                            +@(order.OrderItems.Count - 3) autres articles
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .order-items {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+</style>
+
+@code {
+    private List<Order> orders = new();
+    private bool isLoaded = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadOrders();
+    }
+
+    private async Task LoadOrders()
+    {
+        try
+        {
+            // Vérifier si connecté
+            var token = await Auth.GetTokenAsync();
+            if (string.IsNullOrEmpty(token))
+            {
+                Nav.NavigateTo("/login");
+                return;
+            }
+
+            // Récupérer l'ID utilisateur
+            var userId = await Auth.GetUserIdAsync();
+            if (string.IsNullOrEmpty(userId))
+            {
+                Nav.NavigateTo("/login");
+                return;
+            }
+
+            // Charger les commandes
+            orders = await OrderService.GetMyOrdersAsync(userId);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erreur lors du chargement des commandes: {ex.Message}");
+        }
+        finally
+        {
+            isLoaded = true;
+        }
+    }
+
+    private string GetStatusBadgeClass(string status)
+    {
+        return status?.ToLower() switch
+        {
+            "pending" => "bg-warning text-dark",
+            "confirmed" => "bg-info",
+            "preparing" => "bg-primary",
+            "ready" => "bg-success",
+            "delivered" => "bg-success",
+            "cancelled" => "bg-danger",
+            _ => "bg-secondary"
+        };
+    }
+
+    private string GetStatusText(string status)
+    {
+        return status?.ToLower() switch
+        {
+            "pending" => "En attente",
+            "confirmed" => "Confirmée",
+            "preparing" => "En préparation",
+            "ready" => "Prête",
+            "delivered" => "Livrée",
+            "cancelled" => "Annulée",
+            _ => status ?? "Inconnu"
+        };
+    }
+
+    private string GetPaymentStatusText(string paymentStatus)
+    {
+        return paymentStatus?.ToLower() switch
+        {
+            "pending" => "En attente",
+            "paid" => "Payé",
+            "failed" => "Échec",
+            _ => paymentStatus ?? "Inconnu"
+        };
+    }
+
+    private void GoToProfile()
+    {
+        Nav.NavigateTo("/profile");
+    }
+
+    private void GoToMenu()
+    {
+        Nav.NavigateTo("/menu");
+    }
+}

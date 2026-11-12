@@ -1,0 +1,64 @@
+﻿@page "/testapi"
+@inject HttpClient Http
+
+<h3>Test de Connexion API</h3>
+
+<button class="btn btn-primary mb-3" @onclick="TestApi">Tester l'API</button>
+<button class="btn btn-secondary mb-3" @onclick="TestCors">Tester CORS</button>
+
+@if (!string.IsNullOrEmpty(result))
+{
+    <div class="card mt-3">
+        <div class="card-header">
+            Résultat
+        </div>
+        <div class="card-body">
+            <pre style="max-height: 400px; overflow: auto;">@result</pre>
+        </div>
+    </div>
+}
+
+@code {
+    private string result = string.Empty;
+
+    private async Task TestApi()
+    {
+        try
+        {
+            result = "Test en cours...";
+            StateHasChanged();
+
+            var response = await Http.GetAsync("");
+            result = $"Status: {response.StatusCode}\nURL: {Http.BaseAddress}";
+        }
+        catch (Exception ex)
+        {
+            result = $"Erreur: {ex.Message}\nType: {ex.GetType().Name}";
+        }
+    }
+
+    private async Task TestCors()
+    {
+        try
+        {
+            result = "Test CORS en cours...";
+            StateHasChanged();
+
+            // Test OPTIONS (pre-flight request)
+            var request = new HttpRequestMessage(HttpMethod.Options, "api/Account/Login");
+            var response = await Http.SendAsync(request);
+
+            result = $"CORS Pre-flight Status: {response.StatusCode}\n";
+            result += $"Headers:\n";
+
+            foreach (var header in response.Headers)
+            {
+                result += $"{header.Key}: {string.Join(", ", header.Value)}\n";
+            }
+        }
+        catch (Exception ex)
+        {
+            result = $"Erreur CORS: {ex.Message}";
+        }
+    }
+}

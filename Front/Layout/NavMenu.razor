@@ -1,0 +1,342 @@
+﻿@using Front.Services
+@inject NavigationManager Navigation
+@inject AuthService AuthService
+
+<div class="nav-menu">
+    <div class="nav-header p-3 bg-dark text-white">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-restaurant me-2"></i>
+            <h5 class="mb-0">MonResto</h5>
+        </div>
+        <small class="text-muted">Votre restaurant en ligne</small>
+    </div>
+
+    <div class="nav-items p-3">
+        <!-- Section publique -->
+        <div class="nav-section mb-3">
+            <div class="nav-section-title small text-uppercase text-muted mb-2">
+                <i class="bi bi-compass me-1"></i> Navigation
+            </div>
+
+            <div class="nav-item mb-2">
+                <NavLink class="@GetNavLinkClass("/")" href="/" Match="NavLinkMatch.All">
+                    <i class="bi bi-house-door me-2"></i> Accueil
+                </NavLink>
+            </div>
+
+            <div class="nav-item mb-2">
+                <NavLink class="@GetNavLinkClass("/menu")" href="/menu">
+                    <i class="bi bi-menu-button-wide me-2"></i> Menu
+                </NavLink>
+            </div>
+        </div>
+
+        <!-- Section utilisateur connecté -->
+        @if (isAuthenticated)
+        {
+            <div class="nav-section mb-3">
+                <div class="nav-section-title small text-uppercase text-muted mb-2">
+                    <i class="bi bi-person me-1"></i> Mon Compte
+                </div>
+
+                <div class="nav-item mb-2">
+                    <NavLink class="@GetNavLinkClass("/panier")" href="/panier">
+                        <i class="bi bi-cart me-2"></i> Panier
+                    </NavLink>
+                </div>
+
+                <div class="nav-item mb-2">
+                    <NavLink class="@GetNavLinkClass("/orders")" href="/orders">
+                        <i class="bi bi-receipt me-2"></i> Mes Commandes
+                    </NavLink>
+                </div>
+
+                <div class="nav-item mb-2">
+                    <NavLink class="@GetNavLinkClass("/profile")" href="/profile">
+                        <i class="bi bi-person-circle me-2"></i> Mon Profil
+                    </NavLink>
+                </div>
+
+                <!-- Section admin -->
+                @if (isAdmin)
+                {
+                    <div class="nav-section-title small text-uppercase text-muted mb-2 mt-3">
+                        <i class="bi bi-shield-lock me-1"></i> Administration
+                    </div>
+
+                    <div class="nav-item mb-2">
+                        <NavLink class="@GetNavLinkClass("/admin/articles")" href="/admin/articles">
+                            <i class="bi bi-egg-fried me-2"></i> Articles
+                        </NavLink>
+                    </div>
+
+                    <div class="nav-item mb-2">
+                        <NavLink class="@GetNavLinkClass("/admin/categories")" href="/admin/categories">
+                            <i class="bi bi-tags me-2"></i> Catégories
+                        </NavLink>
+                    </div>
+
+                    <div class="nav-item mb-2">
+                        <NavLink class="@GetNavLinkClass("/admin/orders")" href="/admin/orders">
+                            <i class="bi bi-clipboard-data me-2"></i> Commandes
+                        </NavLink>
+                    </div>
+                }
+            </div>
+        }
+
+        <!-- Section connexion/déconnexion -->
+        <div class="nav-section mt-4">
+            @if (isAuthenticated)
+            {
+                <div class="user-info p-3 bg-light rounded mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="user-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-2"
+                             style="width: 40px; height: 40px;">
+                            @if (!string.IsNullOrEmpty(userInitials))
+                            {
+                                @userInitials
+                            }
+                            else
+                            {
+                                <i class="bi bi-person"></i>
+                            }
+                        </div>
+                        <div>
+                            <div class="fw-bold">@userName</div>
+                            <small class="text-muted">@userEmail</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button class="nav-link text-danger w-100 text-start" @onclick="Logout">
+                        <i class="bi bi-box-arrow-right me-2"></i> Déconnexion
+                    </button>
+                </div>
+            }
+            else
+            {
+                <div class="nav-item mb-2">
+                    <NavLink class="@GetButtonClass("/login", "outline-primary")" href="/login">
+                        <i class="bi bi-box-arrow-in-right me-2"></i> Connexion
+                    </NavLink>
+                </div>
+
+                <div class="nav-item">
+                    <NavLink class="@GetButtonClass("/register", "primary")" href="/register">
+                        <i class="bi bi-person-plus me-2"></i> Inscription
+                    </NavLink>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .nav-menu {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+    }
+
+    .nav-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-items {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .nav-section {
+        margin-bottom: 1rem;
+    }
+
+    .nav-section-title {
+        padding: 0.25rem 0.5rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        color: #495057;
+        text-decoration: none;
+        border-radius: 0.375rem;
+        transition: all 0.2s;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+    }
+
+        .nav-link:hover {
+            background-color: #e9ecef;
+            color: #0d6efd;
+        }
+
+        .nav-link.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+    .btn-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 0.375rem;
+        transition: all 0.2s;
+        width: 100%;
+        text-align: left;
+        border: 1px solid transparent;
+    }
+
+        .btn-nav-link.btn-outline-primary {
+            border: 1px solid #0d6efd;
+            color: #0d6efd;
+            background: none;
+        }
+
+            .btn-nav-link.btn-outline-primary:hover {
+                background-color: #0d6efd;
+                color: white;
+            }
+
+        .btn-nav-link.btn-primary {
+            background-color: #0d6efd;
+            color: white;
+            border: 1px solid #0d6efd;
+        }
+
+            .btn-nav-link.btn-primary:hover {
+                background-color: #0b5ed7;
+                border-color: #0a58ca;
+            }
+
+        .btn-nav-link.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+    .nav-link.text-danger {
+        color: #dc3545 !important;
+    }
+
+        .nav-link.text-danger:hover {
+            background-color: rgba(220, 53, 69, 0.1);
+        }
+
+    .user-info {
+        border: 1px solid #dee2e6;
+    }
+
+    .user-avatar {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+</style>
+
+@code {
+    private bool isAuthenticated = false;
+    private bool isAdmin = false;
+    private string currentUrl = string.Empty;
+    private string userName = string.Empty;
+    private string userEmail = string.Empty;
+    private string userInitials = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        currentUrl = Navigation.Uri;
+        await CheckAuth();
+
+        Navigation.LocationChanged += (sender, args) =>
+        {
+            currentUrl = args.Location;
+            StateHasChanged();
+        };
+    }
+
+    private async Task CheckAuth()
+    {
+        try
+        {
+            var token = await AuthService.GetTokenAsync();
+            isAuthenticated = !string.IsNullOrEmpty(token);
+
+            if (isAuthenticated)
+            {
+                userEmail = await AuthService.GetItemAsync<string>("userEmail") ?? string.Empty;
+                var firstName = await AuthService.GetItemAsync<string>("userFirstName") ?? string.Empty;
+                var lastName = await AuthService.GetItemAsync<string>("userLastName") ?? string.Empty;
+
+                if (!string.IsNullOrEmpty(firstName))
+                {
+                    userName = firstName;
+                }
+                else if (!string.IsNullOrEmpty(userEmail) && userEmail.Contains("@"))
+                {
+                    userName = userEmail.Split('@')[0];
+                }
+                else
+                {
+                    userName = "Utilisateur";
+                }
+
+                if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
+                {
+                    userInitials = $"{firstName[0]}{lastName[0]}".ToUpper();
+                }
+                else if (!string.IsNullOrEmpty(userName))
+                {
+                    userInitials = userName[0].ToString().ToUpper();
+                }
+
+                var roles = await AuthService.GetRolesAsync();
+                isAdmin = roles?.Contains("Admin") == true;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"NavMenu CheckAuth error: {ex.Message}");
+        }
+    }
+
+    private string GetNavLinkClass(string url)
+    {
+        var baseClass = "nav-link";
+        var activeClass = currentUrl.Contains(url) ? " active" : "";
+        return $"{baseClass}{activeClass}";
+    }
+
+    private string GetButtonClass(string url, string buttonType)
+    {
+        var baseClass = $"btn-nav-link btn-{buttonType}";
+        var activeClass = currentUrl.Contains(url) ? " active" : "";
+        return $"{baseClass}{activeClass}";
+    }
+
+    private async Task Logout()
+    {
+        try
+        {
+            await AuthService.LogoutAsync();
+            isAuthenticated = false;
+            isAdmin = false;
+            userName = string.Empty;
+            userEmail = string.Empty;
+            userInitials = string.Empty;
+
+            Navigation.NavigateTo("/", forceLoad: false);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"NavMenu Logout error: {ex.Message}");
+        }
+    }
+}

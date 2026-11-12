@@ -1,0 +1,201 @@
+﻿@inherits LayoutComponentBase
+@using Front.Services
+@inject AuthService Auth
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+
+<PageTitle>MonResto</PageTitle>
+
+@if (isLoading)
+{
+    <div class="loading-screen">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+}
+else
+{
+    <div class="page @(sidebarCollapsed ? "sidebar-collapsed" : "")">
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+
+        <main>
+            <div class="top-bar px-4 py-2 bg-primary text-white d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-sm btn-light me-3" @onclick="ToggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <span class="h5 mb-0">MonResto - Votre restaurant en ligne</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    @if (isAuthenticated)
+                    {
+                        <span class="me-3">
+                            Bonjour, @userName!
+                            @if (isAdmin)
+                            {
+                                <span class="badge bg-danger ms-1">Admin</span>
+                            }
+                        </span>
+                        <a href="/cart" class="btn btn-light btn-sm me-2">
+                            <i class="bi bi-cart"></i> Panier
+                            @if (cartItemCount > 0)
+                            {
+                                <span class="badge bg-danger ms-1">@cartItemCount</span>
+                            }
+                        </a>
+                        <button class="btn btn-outline-light btn-sm" @onclick="Logout">
+                            <i class="bi bi-box-arrow-right"></i> Déconnexion
+                        </button>
+                    }
+                    else
+                    {
+                        <a href="/login" class="btn btn-light btn-sm">Connexion</a>
+                    }
+                </div>
+            </div>
+
+            <article class="content px-4 py-3">
+                @Body
+            </article>
+        </main>
+    </div>
+}
+
+<style>
+    .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 9999;
+    }
+
+    .page {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+        transition: width 0.3s;
+    }
+
+    .sidebar-collapsed .sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-bar {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .content {
+        flex: 1;
+        overflow-y: auto;
+    }
+</style>
+
+@code {
+    private bool sidebarCollapsed = false;
+    private bool isAuthenticated = false;
+    private bool isAdmin = false;
+    private bool isLoading = true;
+    private string userName = string.Empty;
+    private int cartItemCount = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CheckAuth();
+        isLoading = false;
+    }
+
+    private async Task CheckAuth()
+    {
+        try
+        {
+            // Utiliser GetTokenAsync au lieu de GetItemAsync directement
+            var token = await Auth.GetTokenAsync();
+            isAuthenticated = !string.IsNullOrEmpty(token);
+
+            if (isAuthenticated)
+            {
+                // Récupérer email de manière sécurisée
+                var email = await Auth.GetUserIdAsync() ?? "Utilisateur";
+
+                // Récupérer les rôles
+                var roles = await Auth.GetRolesAsync();
+                isAdmin = roles?.Contains("Admin") == true;
+
+                // Récupérer le nom depuis le localStorage
+                var firstName = await Auth.GetItemAsync<string>("userFirstName") ?? "";
+                var lastName = await Auth.GetItemAsync<string>("userLastName") ?? "";
+
+                // Déterminer le nom à afficher
+                if (!string.IsNullOrEmpty(firstName))
+                {
+                    userName = firstName;
+                }
+                else if (!string.IsNullOrEmpty(email) && email.Contains("@"))
+                {
+                    userName = email.Split('@')[0]; // Juste la partie avant @
+                }
+                else
+                {
+                    userName = email ?? "Utilisateur";
+                }
+
+                Console.WriteLine($"Auth check: User={userName}, Admin={isAdmin}, Authenticated={isAuthenticated}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in CheckAuth: {ex.Message}");
+            isAuthenticated = false;
+        }
+    }
+
+    private void ToggleSidebar()
+    {
+        sidebarCollapsed = !sidebarCollapsed;
+        StateHasChanged();
+    }
+
+    private async Task Logout()
+    {
+        try
+        {
+            await Auth.LogoutAsync();
+            isAuthenticated = false;
+            isAdmin = false;
+            userName = string.Empty;
+
+            // Notifier le changement d'état
+            await InvokeAsync(StateHasChanged);
+
+            // Rediriger vers la page d'accueil
+            Nav.NavigateTo("/", forceLoad: false);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Logout error: {ex.Message}");
+            await JS.InvokeVoidAsync("alert", "Erreur lors de la déconnexion");
+        }
+    }
+}

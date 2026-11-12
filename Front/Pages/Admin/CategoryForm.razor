@@ -1,0 +1,231 @@
+@page "/admin/categoryform"
+@page "/admin/categoryform/{CategoryId:int}"
+@using Front.Models
+@using Front.Services
+@inject CategoryAdminService CategoryAdminService
+@inject AuthService Auth
+@inject NavigationManager Nav
+@inject IJSRuntime JSRuntime
+
+<div class="container py-4">
+    <h1 class="mb-4">@(isEditMode ? "Modifier la catégorie" : "Nouvelle Catégorie")</h1>
+
+    @if (!isAdmin)
+    {
+        <div class="alert alert-danger">
+            <p>Accès réservé aux administrateurs.</p>
+            <button class="btn btn-secondary" @onclick="GoToCategories">Retour à la liste</button>
+        </div>
+    }
+    else if (loading)
+    {
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+            <p class="mt-2">Chargement du formulaire...</p>
+        </div>
+    }
+    else
+    {
+        <div class="card shadow">
+            <div class="card-body">
+                <EditForm Model="category" OnValidSubmit="SaveCategory">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary class="alert alert-danger" />
+
+                    <!-- Champ Nom -->
+                    <div class="mb-3">
+                        <label class="form-label">Nom de la catégorie *</label>
+                        <InputText @bind-Value="category.Name" class="form-control"
+                                   placeholder="Ex: Pizzas, Salades..." />
+                        <ValidationMessage For="@(() => category.Name)" class="text-danger small" />
+                    </div>
+
+                    <!-- Champ Description -->
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <InputTextArea @bind-Value="category.Description" class="form-control"
+                                       placeholder="Description de la catégorie..." rows="3" />
+                    </div>
+
+                    <!-- Boutons d'action -->
+                    <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                        <button type="button" class="btn btn-secondary" @onclick="Cancel" disabled="@isSaving">
+                            <i class="bi bi-arrow-left me-1"></i> Annuler
+                        </button>
+
+                        <button type="submit" class="btn btn-primary" disabled="@isSaving">
+                            @if (isSaving)
+                            {
+                                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                <span>Enregistrement...</span>
+                            }
+                            else if (isEditMode)
+                            {
+                                <i class="bi bi-save me-1"></i>
+                                <span>Mettre à jour</span>
+                            }
+                            else
+                            {
+                                <i class="bi bi-plus-circle me-1"></i>
+                                <span>Créer la catégorie</span>
+                            }
+                        </button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public int CategoryId { get; set; }
+
+    private Category category = new();
+    private bool isAdmin = false;
+    private bool isEditMode = false;
+    private bool isSaving = false;
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Vérifier les droits administrateur
+            var roles = await Auth.GetRolesAsync();
+            isAdmin = roles?.Contains("Admin") == true;
+
+            if (!isAdmin)
+            {
+                loading = false;
+                return;
+            }
+
+            // Vérifier si on est en mode édition
+            if (CategoryId > 0)
+            {
+                isEditMode = true;
+                await LoadCategory();
+            }
+            else
+            {
+                // Initialiser une nouvelle catégorie
+                category = new Category();
+            }
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Erreur d'initialisation: {ex.Message}");
+        }
+        finally
+        {
+            loading = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadCategory()
+    {
+        try
+        {
+            var loadedCategory = await CategoryAdminService.GetByIdAsync(CategoryId);
+            if (loadedCategory != null)
+            {
+                category = loadedCategory;
+            }
+            else
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "Catégorie non trouvée");
+                GoToCategories();
+            }
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Erreur lors du chargement de la catégorie: {ex.Message}");
+        }
+    }
+
+    private async Task SaveCategory()
+    {
+        if (isSaving) return;
+
+        isSaving = true;
+
+        try
+        {
+            // Validation supplémentaire
+            if (string.IsNullOrWhiteSpace(category.Name))
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "Veuillez saisir un nom pour la catégorie");
+                isSaving = false;
+                return;
+            }
+
+            Category? result;
+            if (isEditMode)
+            {
+                // Mise à jour de la catégorie existante
+                result = await CategoryAdminService.UpdateAsync(category);
+                if (result != null)
+                {
+                    await JSRuntime.InvokeVoidAsync("alert", "Catégorie mise à jour avec succès !");
+                }
+                else
+                {
+                    await JSRuntime.InvokeVoidAsync("alert", "Erreur lors de la mise à jour");
+                    isSaving = false;
+                    return;
+                }
+            }
+            else
+            {
+                // Création d'une nouvelle catégorie
+                result = await CategoryAdminService.CreateAsync(category);
+                if (result != null)
+                {
+                    await JSRuntime.InvokeVoidAsync("alert", "Catégorie créée avec succès !");
+                }
+                else
+                {
+                    await JSRuntime.InvokeVoidAsync("alert", "Erreur lors de la création");
+                    isSaving = false;
+                    return;
+                }
+            }
+
+            // Petite pause avant la redirection
+            await Task.Delay(1500);
+
+            // Retour à la liste
+            GoToCategories();
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Erreur lors de la sauvegarde: {ex.Message}");
+        }
+        finally
+        {
+            isSaving = false;
+            StateHasChanged();
+        }
+    }
+
+    private async void Cancel()
+    {
+        if (isSaving) return;
+
+        bool confirm = await JSRuntime.InvokeAsync<bool>("confirm",
+            "Voulez-vous vraiment annuler ? Les modifications non enregistrées seront perdues.");
+
+        if (confirm)
+        {
+            GoToCategories();
+        }
+    }
+
+    private void GoToCategories()
+    {
+        Nav.NavigateTo("/admin/categories");
+    }
+}
