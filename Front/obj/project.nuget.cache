@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v+ZTve5sUkE=",
+  "dgSpecHash": "8WzDHUuAC+k=",
   "success": true,
-  "projectFilePath": "C:\\2'em ing\\.net\\projet\\Front\\Front.csproj",
+  "projectFilePath": "C:\\2_em_ing\\.net\\projet\\Front\\Front.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.9\\microsoft.aspnetcore.authorization.9.0.9.nupkg.sha512",
@@ -30,8 +30,8 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.jsinterop\\9.0.9\\microsoft.jsinterop.9.0.9.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.jsinterop.webassembly\\9.0.9\\microsoft.jsinterop.webassembly.9.0.9.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.9\\microsoft.net.illink.tasks.9.0.9.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.11\\microsoft.net.sdk.webassembly.pack.9.0.11.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.12\\microsoft.net.sdk.webassembly.pack.9.0.12.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.12\\microsoft.netcore.app.ref.9.0.12.nupkg.sha512"
   ],
   "logs": []
 }
